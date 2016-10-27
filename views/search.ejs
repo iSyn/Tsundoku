@@ -20,12 +20,23 @@
     <div class="page-container">
 
       <div class="header-container">
-        <a href=#><div class="main-header">TSUNDOKU.</div></a>
+        <a href='/'><div class="main-header">TSUNDOKU.</div></a>
         <i class="fa fa-user fa-3x"></i>
       </div> <!-- header-container -->
 
       <div class="content-area-container">
-        <h1> SEARCH </h1>
+        <div class="search-results">
+          <% books.forEach((e) => { %>
+            <% if (e.volumeInfo.imageLinks.thumbnail) { %>
+              <img src= <%= e.volumeInfo.imageLinks.thumbnail %> >
+            <% } %>
+            <div class="modal" id='book<%= + e.volumeInfo.id %>'>
+              <li><%=e.volumeInfo.title%></li>
+              <li><%=e.volumeInfo.description%></li>
+            </div>
+          <% }) %>
+        </div>
+        <a href='/'><p> go back to search </p></a>
       </div>
 
       <div class="footer">&copy Synclair Wang 2016</div>

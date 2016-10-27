@@ -4,14 +4,16 @@ const fetch = require('node-fetch');
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?'
 const API_KEY = process.env.GOOGLEBOOKS_KEY
-const SEARCH = 'harry+potter'
+
+var str = 'a b c';
+var replaced = str.split(' ').join('+');
 
 const searchBook = (req, res, next) => {
-  fetch(`${API_URL}q=${SEARCH}&maxResults=40&key=${API_KEY}`)
+  let currentSearch = (req.query.search).split(' ').join('+')
+  fetch(`${API_URL}q=${currentSearch}&maxResults=40&key=${API_KEY}`)
   .then(r => r.json())
   .then(result => {
-    res.books = result.items
-
+    res.books = result.items || []
     next()
   })
   .catch(err => {
