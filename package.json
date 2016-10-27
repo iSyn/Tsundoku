@@ -1,0 +1,30 @@
+{
+  "name": "tsundoku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSyn/tsundoku.git"
+  },
+  "author": "Synclair Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSyn/tsundoku/issues"
+  },
+  "homepage": "https://github.com/iSyn/tsundoku#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "node-fetch": "^1.6.3",
+    "path": "^0.12.7"
+  }
+}
