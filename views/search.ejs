@@ -24,19 +24,17 @@
         <i class="fa fa-user fa-3x"></i>
       </div> <!-- header-container -->
 
-      <div class="content-area-container">
+      <div class="content-area-container-search">
         <div class="search-results">
-          <% books.forEach((e) => { %>
-            <% if (e.volumeInfo.imageLinks.thumbnail) { %>
-              <img src= <%= e.volumeInfo.imageLinks.thumbnail %> >
-            <% } %>
-            <div class="modal" id='book<%= + e.volumeInfo.id %>'>
-              <li><%=e.volumeInfo.title%></li>
-              <li><%=e.volumeInfo.description%></li>
+          <% books.forEach((book) => { %>
+            <img src= <%= book.volumeInfo.imageLinks.thumbnail %> >
+            <div class="modal" id='book<%= + book.volumeInfo.id %>'>
+              <li><%=book.volumeInfo.title%></li>
+              <li><%=book.volumeInfo.author%></li>
+              <li><%=book.volumeInfo.description%></li>
             </div>
           <% }) %>
         </div>
-        <a href='/'><p> go back to search </p></a>
       </div>
 
       <div class="footer">&copy Synclair Wang 2016</div>
