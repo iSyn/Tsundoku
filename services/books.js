@@ -7,13 +7,14 @@ const API_KEY = process.env.GOOGLEBOOKS_KEY
 
 const searchBook = (req, res, next) => {
   let currentSearch = (req.query.search).split(' ').join('+')
+  console.log(`${API_URL}q=${currentSearch}&maxResults=40&key=${API_KEY}`)
   fetch(`${API_URL}q=${currentSearch}&maxResults=40&key=${API_KEY}`)
   .then(r => r.json())
   .then(result => {
     res.books = result.items || []
     next()
   })
-  .catch(err => {t
+  .catch(err => {
     console.log('Error: ', err)
     next()
   })

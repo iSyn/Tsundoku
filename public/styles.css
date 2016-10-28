@@ -1,9 +1,20 @@
+
 * {
   cursor: default;
 }
 
 input {
   outline: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  border: 1px solid black;
+  height: 50px;
+  line-height: 20px;
+
 }
 
 img {
@@ -15,6 +26,20 @@ img {
   min-width: 130px;
   margin: 5px;
   cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.title-name {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Oswald';
+}
+
+.book-description {
+  font-family: 'Droid Serif';
 }
 
 .page-container {
@@ -39,6 +64,12 @@ img {
   cursor: pointer;
 }
 
+.sub-header {
+  font-family: 'Slabo 27px';
+  font-size: 15px;
+  display: none;
+}
+
 .main-header:hover {
   color: grey;
 }
@@ -56,6 +87,7 @@ img {
 }
 
 .content-area-container-search {
+  background: snow;
   position: relative;
   height: 87%;
   width: 100%;
@@ -95,8 +127,10 @@ img {
 }
 
 .footer {
+  position: absolute;
   text-align: center;
   bottom: 0px;
+  width: 100vw;
 }
 
 form {
@@ -107,20 +141,70 @@ form {
 
 .modal {
   display: none;
-  width: 700px;
-  height:700;
-  border: 1px solid black;
+  width: 90vw;
+  height: 60vh;
+  border: 3px solid black;
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   margin-left:-350px;
-  margin-top:-350px;
-  background: white;
+  margin-top: -270px;
+  background: snow;
+  padding: 10px;
 }
 
+.modal-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.modal-area {
 
+}
 
+.modal-image {
+  width: 30%;
+  min-width: 300px;
+  min-height: 450px;
+  border: 2px solid black;
+  cursor: default;
+}
 
+.book-info-area {
+  width: 70%;
+  overflow: auto;
+}
+
+.cover-page {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.fa-times {
+  position: absolute;
+  left: 98%;
+  color: black;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  color: lightgrey;
+}
+
+.tsundoku-it {
+  height: 30px;
+}
+
+@media (max-width: 600px) {
+  .sub-header{
+    font-size: 50px;
+  }
+}
 
