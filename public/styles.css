@@ -260,7 +260,6 @@ form {
 }
 
 .account-modal-wrapper {
-  background-color: red;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -275,7 +274,9 @@ form {
 
 .account-header {
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 

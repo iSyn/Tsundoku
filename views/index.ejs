@@ -24,13 +24,19 @@
           <div class="account login-section">
             <div class='account-header login-section-header'>Log In</div>
             <form class="" action="/auth" method="post">
-              <input type="text" name="user[username]" value="" placeholder="Username">
-              <input type="password" name="user[password]" value="" placeholder="Password">
+              <input type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
               <input type="submit" name="name" value="Log in">
             </form>
           </div>
           <div class="account create-section">
             <div class='account-header create-section-header'>Create New Account</div>
+            <form class="" action="/users" method="post">
+              <input type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input type="email" name="user[email]" value="" placeholder="Email" autocomplete="off" required="required"> <br>
+              <input type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
+              <input type="submit" value="Sign up">
+            </form>
           </div>
         </div> <!-- account-modal-wrapper -->
       </div> <!-- account-modal -->
@@ -41,7 +47,7 @@
         <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
           <div class="dropdown-content">
             <div class='accounts-button'>Create Account</div>
-            <div class='accounts-button'>Login</div>
+            <div class='accounts-button'>Log In</div>
             <div class='accounts-button'>View Profile</div>
           </div>
         </nav> <!-- dropdown-menu -->

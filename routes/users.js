@@ -11,7 +11,7 @@ const usersRouter  = express.Router();
  * It uses the createUser middleware from the user model
  */
 usersRouter.post('/', createUser, (req, res) => {
-  res.redirect('/');
+  res.redirect('/users/profile');
 });
 
 /**
