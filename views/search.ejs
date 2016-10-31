@@ -21,14 +21,43 @@
   <body>
 
     <div class="page-container">
+      <div class='cover-page'></div>
+      <div class='page-container-cover'></div>
+      <div class='account-modal'>
+        <i class="fa fa-times account-close-window"></i>
+        <div class='account-modal-wrapper'>
+          <div class="account login-section">
+            <div class='account-header login-section-header'>Log In</div>
+            <form class="" action="/auth" method="post">
+              <input class='login-area' type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="submit" name="name" value="Log in">
+            </form>
+          </div>
+          <div class="account create-section">
+            <div class='account-header create-section-header'>Create New Account</div>
+            <form class="" action="/users" method="post">
+              <input class='login-area' type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="email" name="user[email]" value="" placeholder="Email" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="submit" value="Sign up">
+            </form>
+          </div>
+        </div> <!-- account-modal-wrapper -->
+      </div> <!-- account-modal -->
 
       <div class="header-container">
         <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
-        <i class="fa fa-user fa-3x"></i>
+        <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
+          <div class="dropdown-content">
+            <div class='accounts-button'>Create Account</div>
+            <div class='accounts-button'>Log In</div>
+            <div class='accounts-button'>View Profile</div>
+          </div>
+        </nav> <!-- dropdown-menu -->
       </div> <!-- header-container -->
 
       <div class="content-area-container-search">
-        <div class='cover-page'></div>
         <div class="search-results">
           <% books.forEach((book) => { %>
           <% if (book.volumeInfo.imageLinks){ %>
@@ -44,7 +73,7 @@
                 <div class='modal-area book-info-area'>
                   <li class='title-name'><%=book.volumeInfo.title%></li> <br>
                   <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
-                  <button class='tsundoku-it' type="submit">TSUNDOKU IT</button>
+                  <button class='tsundoku-it-broken' type="submit">SIGN IN TO TSUNDOKU IT</button>
                   <li class='book-description'><br><%=book.volumeInfo.description%></li>
                 </div>
               </div> <!-- model-container -->

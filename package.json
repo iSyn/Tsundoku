@@ -2,6 +2,9 @@
   "name": "tsundoku",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "6.6.0"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,6 +33,7 @@
     "mongodb": "^2.2.11",
     "morgan": "^1.7.0",
     "node-fetch": "^1.6.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0"
   }
 }

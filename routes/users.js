@@ -11,7 +11,8 @@ const usersRouter  = express.Router();
  * It uses the createUser middleware from the user model
  */
 usersRouter.post('/', createUser, (req, res) => {
-  res.redirect('/users/profile');
+  res.redirect('/users/index');
+
 });
 
 /**
@@ -20,7 +21,8 @@ usersRouter.post('/', createUser, (req, res) => {
  * It is "protected" by the authenticate middleware from the auth library
  */
 usersRouter.get('/profile', authenticate, (req, res) => {
-  res.render('users/profile', { user: res.user });
+  res.render('users/index', { user: res.user });
+  console.log(req.session.userId)
 });
 
 module.exports = usersRouter;

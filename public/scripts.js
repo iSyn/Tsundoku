@@ -35,12 +35,22 @@ $(() => {
 
   $('.accounts-button').click(() => {
     $('.account-modal').css('display', 'block')
-    $('page-container-cover').css('display', 'block')
+    $('.page-container-cover').css('display', 'block')
+    $('.dropdown-content').hide()
   })
 
   $('.account-close-window').click(() => {
     $('.account-modal').css('display', 'none')
-    $('page-container-cover').css('display', 'none')
+    $('.page-container-cover').css('display', 'none')
+  })
+
+  $('.fa-user').mouseover(() => {
+    $('.dropdown-content').show()
+  })
+
+  $('.tsundoku-it-broken').click(() => {
+    $('.account-modal').css('display', 'block')
+    $('.page-container-cover').css('display', 'block')
   })
 
 })

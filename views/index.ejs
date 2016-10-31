@@ -19,23 +19,23 @@
     <div class="page-container">
       <div class='page-container-cover'></div>
       <div class='account-modal'>
+        <i class="fa fa-times account-close-window"></i>
         <div class='account-modal-wrapper'>
-          <i class="fa fa-times account-close-window"></i>
           <div class="account login-section">
             <div class='account-header login-section-header'>Log In</div>
             <form class="" action="/auth" method="post">
-              <input type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
-              <input type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
-              <input type="submit" name="name" value="Log in">
+              <input class='login-area' type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="submit" name="name" value="Log in">
             </form>
           </div>
           <div class="account create-section">
             <div class='account-header create-section-header'>Create New Account</div>
             <form class="" action="/users" method="post">
-              <input type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
-              <input type="email" name="user[email]" value="" placeholder="Email" autocomplete="off" required="required"> <br>
-              <input type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
-              <input type="submit" value="Sign up">
+              <input class='login-area' type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="email" name="user[email]" value="" placeholder="Email" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
+              <input class='login-area' type="submit" value="Sign up">
             </form>
           </div>
         </div> <!-- account-modal-wrapper -->
@@ -55,10 +55,10 @@
 
       <div class="content-area-container">
         <div class="content-area">
-          <div class="content-area-header">Search for a book you want to read but probably won't</div>
+          <div class="content-area-header">Search for a book you <i>want</i> to read <br> but <i>probably</i> won't</div>
           <form action="/search" method="GET">
-            <input class='input-area' type="text" name="search" placeholder="Search for a book" autocomplete="off" required="required">
-            <input type="submit" value="Search Book">
+            <input class='input-area' type="text" name="search" placeholder="Search for a title or author" autocomplete="off" required="required"> <br>
+            <input class='search-book-button' type="submit" value="Search Book">
           </form>
         </div>
       </div> <!-- content-area-container -->
