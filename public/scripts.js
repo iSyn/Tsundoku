@@ -31,4 +31,16 @@ $(() => {
   $('.main-header').mouseout(() => {
     $('span').css('display', 'none')
   })
+
+
+  $('.accounts-button').click(() => {
+    $('.account-modal').css('display', 'block')
+    $('page-container-cover').css('display', 'block')
+  })
+
+  $('.account-close-window').click(() => {
+    $('.account-modal').css('display', 'none')
+    $('page-container-cover').css('display', 'none')
+  })
+
 })

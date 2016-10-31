@@ -17,34 +17,10 @@
 
   <body>
     <div class="page-container">
-      <div class='page-container-cover'></div>
-      <div class='account-modal'>
-        <div class='account-modal-wrapper'>
-          <i class="fa fa-times account-close-window"></i>
-          <div class="account login-section">
-            <div class='account-header login-section-header'>Log In</div>
-            <form class="" action="/auth" method="post">
-              <input type="text" name="user[username]" value="" placeholder="Username">
-              <input type="password" name="user[password]" value="" placeholder="Password">
-              <input type="submit" name="name" value="Log in">
-            </form>
-          </div>
-          <div class="account create-section">
-            <div class='account-header create-section-header'>Create New Account</div>
-          </div>
-        </div> <!-- account-modal-wrapper -->
-      </div> <!-- account-modal -->
-
 
       <div class="header-container">
         <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
-        <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
-          <div class="dropdown-content">
-            <div class='accounts-button'>Create Account</div>
-            <div class='accounts-button'>Login</div>
-            <div class='accounts-button'>View Profile</div>
-          </div>
-        </nav> <!-- dropdown-menu -->
+        <i class="fa fa-user fa-3x"></i>
       </div> <!-- header-container -->
 
       <div class="content-area-container">
@@ -55,11 +31,13 @@
             <input type="submit" value="Search Book">
           </form>
         </div>
-      </div> <!-- content-area-container -->
-
+      </div>
+      <form action="/auth?_method=DELETE" method="post">
+        <input type="submit" value="Logout">
+      </form>
       <div class="footer">&copy Synclair Wang 2016</div>
-
     </div> <!-- page-container -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="scripts.js"></script>
