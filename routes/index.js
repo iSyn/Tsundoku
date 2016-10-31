@@ -8,13 +8,13 @@ indexRouter.get('/', (req, res) => {
 });
 
 // This route serves your `/login` form
-indexRouter.get('/login', (req, res) => {
-  res.render('login');
-});
+// indexRouter.get('/login', (req, res) => {
+//   res.render('login');
+// });
 
 // This route serves your `/signup` form
-indexRouter.get('/signup', (req, res) => {
-  res.render('signup');
-});
+// indexRouter.get('/signup', (req, res) => {
+//   res.render('signup');
+// });
 
 module.exports = indexRouter;

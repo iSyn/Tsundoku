@@ -188,7 +188,7 @@ form {
 
 .book-info-area {
   width: 70%;
-  overflow: auto;
+  overflow-x: auto;
 }
 
 .cover-page {

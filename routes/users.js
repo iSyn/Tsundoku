@@ -12,7 +12,6 @@ const usersRouter  = express.Router();
  */
 usersRouter.post('/', createUser, (req, res) => {
   res.redirect('/users/index');
-
 });
 
 /**
@@ -22,7 +21,6 @@ usersRouter.post('/', createUser, (req, res) => {
  */
 usersRouter.get('/profile', authenticate, (req, res) => {
   res.render('users/index', { user: res.user });
-  console.log(req.session.userId)
 });
 
 module.exports = usersRouter;

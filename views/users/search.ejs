@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Tsundoku </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="page-container">
+      <div class='cover-page'></div>
+      <div class='page-container-cover'></div>
+      <div class="header-container">
+        <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
+        <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
+          <div class="dropdown-content">
+            <div class='accounts-button'>View Profile</div>
+            <div class='accounts-button'>Log Out</div>
+            <form action="/auth?_method=DELETE" method="post">
+              <input type="submit" value="Logout">
+            </form>
+          </div>
+        </nav> <!-- dropdown-menu -->
+      </div> <!-- header-container -->
+
+      <div class="content-area-container-search">
+        <div class="search-results">
+          <% books.forEach((book) => { %>
+          <% if (book.volumeInfo.imageLinks){ %>
+            <img src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
+            <% }; %>
+            <div class="modal" id='<%= book.id %>'>
+              <div class='modal-container'>
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class='modal-area book-picture-area'>
+                  <% if (book.volumeInfo.imageLinks){ %>
+                  <img class='modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
+                </div>
+                <div class='modal-area book-info-area'>
+                  <li class='title-name'><%=book.volumeInfo.title%></li> <br>
+                  <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
+                  <button class='tsundoku-it-broken' type="submit">SIGN IN TO TSUNDOKU IT</button>
+                  <li class='book-description'><br><%=book.volumeInfo.description%></li>
+                </div>
+              </div> <!-- model-container -->
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+      <div class="footer">&copy Synclair Wang 2016</div>
+    </div> <!-- page-container -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="scripts.js"></script>
+
+  </body>
+
+</html>
