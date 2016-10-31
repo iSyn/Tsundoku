@@ -45,4 +45,4 @@ const usersRouter = require('./routes/users');
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
-app.get('/search', searchRoute)
+app.use('/search', searchRoute)

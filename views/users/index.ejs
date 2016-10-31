@@ -17,14 +17,15 @@
 
   <body>
     <div class="page-container">
+      <div class='page-container-cover'></div>
+      <div class='cover-page'></div>
       <div class="header-container">
         <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
         <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
           <div class="dropdown-content">
             <div class='accounts-button'>View Profile</div>
-            <div class='accounts-button'>Log Out</div>
             <form action="/auth?_method=DELETE" method="post">
-              <input type="submit" value="Logout">
+              <input class='log-out-button' type="submit" value="Log Out">
             </form>
           </div>
         </nav> <!-- dropdown-menu -->
@@ -34,7 +35,7 @@
         <div class="content-area">
           <div class='welcome-message'>Welcome back <%= user.username %> <br> Did you start reading yet?</div>
           <div class="content-area-header">Search for a book you <i>want</i> to read <br> but <i>probably</i> won't</div>
-          <form action="/search" method="GET">
+          <form action="/search" method="get">
             <input class='input-area' type="text" name="search" placeholder="Search for a title or author" autocomplete="off" required="required"> <br>
             <input class='search-book-button' type="submit" value="Search Book">
           </form>
