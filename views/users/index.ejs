@@ -33,7 +33,7 @@
 
       <div class="content-area-container">
         <div class="content-area">
-          <div class='welcome-message'>Welcome back <%= user.username %> <br> Did you start reading yet?</div>
+          <div class='welcome-message'><span class='name'><%= user.username %></span> <br> <%= greeting %> </div>
           <div class="content-area-header">Search for a book you <i>want</i> to read <br> but <i>probably</i> won't</div>
           <form action="/search" method="get">
             <input class='input-area' type="text" name="search" placeholder="Search for a title or author" autocomplete="off" required="required"> <br>

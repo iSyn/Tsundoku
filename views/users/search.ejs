@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   </head>
 
@@ -22,7 +23,7 @@
 
     <div class="page-container">
 
-      <!-- <div class='tsundokud-modal'>TSUNDOKU'D</div> -->
+      <div class='tsundokud-modal'>TSUNDOKU'd</div>
 
       <div class='page-container-cover'></div>
       <div class='cover-page'></div>
@@ -30,10 +31,9 @@
         <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
         <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
           <div class="dropdown-content">
-            <div class='accounts-button'>View Profile</div>
-            <div class='accounts-button'>Log Out</div>
+            <div class='view-profile'>View Profile</div>
             <form action="/auth?_method=DELETE" method="post">
-              <input type="submit" value="Logout">
+              <input class='log-out-button' type="submit" value="Log Out">
             </form>
           </div>
         </nav> <!-- dropdown-menu -->

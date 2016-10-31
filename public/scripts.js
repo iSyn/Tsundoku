@@ -53,4 +53,16 @@ $(() => {
     $('.page-container-cover').css('display', 'block')
   })
 
+  $('.tsundoku-it').click(() => {
+    $('.tsundokud-modal').css('display', 'block')
+    $('.modal').css('display','none')
+    setTimeout(() => {
+      $('.tsundokud-modal').css('display', 'none')
+      $('.cover-page').css('display', 'none')
+    },500)
+  })
+
+
+
+
 })

@@ -19,8 +19,21 @@ usersRouter.post('/', createUser, (req, res) => {
  * It redirects to /login when attempted to be reached by a non logged in user
  * It is "protected" by the authenticate middleware from the auth library
  */
-usersRouter.get('/profile', authenticate, (req, res) => {
-  res.render('users/index', { user: res.user });
+usersRouter.get('/home', authenticate, (req, res) => {
+  const greetings = [
+    'Did you start reading yet',
+    'Stop dillydallying and read!',
+    'Ugh... just pick up your book and read',
+    'Hey you... yea you... READ!',
+    'read, read, read, read'
+  ]
+
+  let whichGreeting = Math.floor(Math.random() * greetings.length)
+
+  res.render('users/index', {
+    user: res.user,
+    greeting: greetings[whichGreeting]
+  });
 });
 
 module.exports = usersRouter;

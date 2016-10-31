@@ -38,7 +38,7 @@ app.listen(PORT, () => { console.log('CHOO CHOO! SHITS RUNNIN ON PORT', PORT) })
 // ROUTES
 
 const searchRoute = require('./routes/search')
-const indexRouter = require('./routes/index.js');
+const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const usersRouter = require('./routes/users');
 
