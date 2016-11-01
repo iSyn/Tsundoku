@@ -21,8 +21,10 @@ function getFavorites(req, res, next) {
 
 function saveFavorite(req, res, next) {
   // creating an empty object for the insertObj
-  const insertObj = {};
-  
+  const insertObj = {
+    favorite: {userId: undefined},
+  };
+  // console.log('!!!!!!!!!!!!' + res.session.userId)
   // copying all of req.body into insertObj
   for(key in req.body) {
     insertObj[key] = req.body[key];

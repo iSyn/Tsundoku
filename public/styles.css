@@ -354,9 +354,9 @@ form {
 .tsundokud-modal {
   display: none;
   position: absolute;
-  height: 30vh;
-  line-height: 30vh;
-  font-size: 150px;
+  height: 40vh;
+  line-height: 40vh;
+  font-size: 190px;
   text-align: center;
   width: 100%;
   background: linen;

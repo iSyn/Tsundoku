@@ -19,10 +19,10 @@
     <div class="page-container">
 
       <div class="header-container">
-        <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
+        <a href='/users/home'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
         <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
           <div class="dropdown-content">
-            <div class='accounts-button'><a href='/users/profile'>View Profile</a></div>
+            <a href='/users/profile'><div class='accounts-button'>View Profile</div></a>
             <form action="/auth?_method=DELETE" method="post">
               <input class='log-out-button' type="submit" value="Log Out">
             </form>
@@ -34,7 +34,11 @@
         <div class='profile-area left-side'>
           <div class='profile-left-header'>YOU PROBABLY WONT READ THESE BUT...</div>
           <div class='bookcase-wrapper'>
-            <div class='bookcase'></div>
+            <div class='bookcase'>
+              <% faves.forEach((book) => { %>
+                <p> <%= book.volumeInfo.title %> </p>
+              <% }) %>
+            </div>
           </div>
         </div>
         <div class='profile-area right-side'>

@@ -28,7 +28,7 @@
       <div class='page-container-cover'></div>
       <div class='cover-page'></div>
       <div class="header-container">
-        <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
+        <a href='/users/home'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
         <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
           <div class="dropdown-content">
             <div class='view-profile'><a href='/users/profile'>View Profile</a></div>
@@ -50,13 +50,17 @@
                 <i class="fa fa-times" aria-hidden="true"></i>
                 <div class='modal-area book-picture-area'>
                   <% if (book.volumeInfo.imageLinks){ %>
-                  <img class='modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
+
+                  <form action='/users/search' method='POST'>
+                    <img class='modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
                 </div>
-                <div class='modal-area book-info-area'>
-                  <li class='title-name'><%=book.volumeInfo.title%></li> <br>
-                  <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
-                  <button class='tsundoku-it' type="submit">TSUNDOKU IT</button>
-                  <li class='book-description'><br><%=book.volumeInfo.description%></li>
+                  <div class='modal-area book-info-area'>
+                    <li class='title-name'><%=book.volumeInfo.title%></li> <br>
+                    <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
+                    <button class='tsundoku-it' type="submit">TSUNDOKU IT</button>
+                    <li class='book-description'><br><%=book.volumeInfo.description%></li>
+                  </form>
+
                 </div>
               </div> <!-- model-container -->
             </div>
