@@ -2,6 +2,14 @@
   cursor: default;
 }
 
+a:visited {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
 input {
   outline: none;
 }
@@ -373,6 +381,41 @@ form {
 .name {
   font-size: 50px;
 }
+
+.profile-area-container {
+  border: 2px solid blue;
+  background: red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-area {
+  margin-top: -100px;
+  width: 45%;
+  background: green;
+  border: 2px solid white;
+  height: 75%;
+}
+
+.profile-left-header {
+  text-align: center;
+  font-size: 40px;
+}
+
+.bookcase-wrapper {
+  display: flex;
+}
+
+.profile-right-header {
+  text-align: center;
+  font-size: 40px;
+}
+
 
 
 @media (max-width: 1180px) {

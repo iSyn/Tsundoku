@@ -3,6 +3,7 @@
 const express      = require('express');
 const { createUser }    = require('../models/user.js');
 const { authenticate }   = require('../lib/auth');
+const { logIn }  = require('../lib/auth');
 
 const usersRouter  = express.Router();
 
@@ -13,6 +14,10 @@ const usersRouter  = express.Router();
 usersRouter.post('/', createUser, (req, res) => {
   res.redirect('/users/index');
 });
+
+usersRouter.get('/index', (req, res) => {
+  res.render('/users/index')
+})
 
 /**
  * Takes the user to its profile by handling any GET request to `/users/profile`
@@ -34,6 +39,10 @@ usersRouter.get('/home', authenticate, (req, res) => {
     user: res.user,
     greeting: greetings[whichGreeting]
   });
+});
+
+usersRouter.get('/profile', authenticate, (req, res) => {
+  res.render('users/profile');
 });
 
 module.exports = usersRouter;

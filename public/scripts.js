@@ -5,6 +5,7 @@ $(() => {
 
   $('img').click((e) => {
     const modalID = $(e.target).data('modalid');
+    console.log('MODAL ID IS: '+ modalID)
     $(modalID).css('display', 'block');
     $('.cover-page').css('display', 'block')
   })
