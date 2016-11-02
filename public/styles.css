@@ -368,6 +368,10 @@ form {
   font-family: 'Bree Serif', serif;
 }
 
+.bookname {
+  font-size: 50;
+}
+
 .log-out-button {
   width: 100%;
   cursor: pointer;
@@ -415,16 +419,5 @@ form {
   text-align: center;
   font-size: 40px;
 }
-
-
-
-@media (max-width: 1180px) {
-  .sub-header{
-    display: none;
-  }
-}
-
-
-
 
 

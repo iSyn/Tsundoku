@@ -57,6 +57,9 @@
                   <div class='modal-area book-info-area'>
                     <li class='title-name'><%=book.volumeInfo.title%></li> <br>
                     <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
+                    <input type='hidden' name='title' value='<%=book.volumeInfo.title%>'>
+                    <input type='hidden' name='author' value='<%=book.volumeInfo.authors%>'>
+                    <input type='hidden' name='description' value='<%=book.volumeInfo.description%>'>
                     <button class='tsundoku-it' type="submit">TSUNDOKU IT</button>
                     <li class='book-description'><br><%=book.volumeInfo.description%></li>
                   </form>
@@ -73,7 +76,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="scripts.js"></script>
+    <script src="../scripts.js"></script>
 
   </body>
 

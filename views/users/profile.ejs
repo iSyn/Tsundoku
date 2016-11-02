@@ -35,9 +35,11 @@
           <div class='profile-left-header'>YOU PROBABLY WONT READ THESE BUT...</div>
           <div class='bookcase-wrapper'>
             <div class='bookcase'>
-              <% faves.forEach((book) => { %>
-                <p> <%= book.volumeInfo.title %> </p>
-              <% }) %>
+
+              <% for (i = 0; i < faves.length; i++) { %>
+                <p class='bookname'> <%= faves[i] %> </p>
+                <% console.log(faves[i]) %>
+              <% } %>
             </div>
           </div>
         </div>
@@ -53,7 +55,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="scripts.js"></script>
+    <script src="../scripts.js"></script>
 
   </body>
 
