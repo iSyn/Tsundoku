@@ -26,11 +26,11 @@ $(() => {
   })
 
   $('.main-header').mouseover(() => {
-    $('span').css('display', 'inline')
+    $('.sub-header').css('display', 'inline')
   })
 
   $('.main-header').mouseout(() => {
-    $('span').css('display', 'none')
+    $('.sub-header').css('display', 'none')
   })
 
 
