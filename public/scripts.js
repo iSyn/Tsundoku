@@ -60,7 +60,7 @@ $(() => {
     setTimeout(() => {
       $('.tsundokud-modal').css('display', 'none')
       $('.cover-page').css('display', 'none')
-    },5500)
+    },2000)
   })
 
 
