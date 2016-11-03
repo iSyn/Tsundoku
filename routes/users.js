@@ -32,7 +32,8 @@ usersRouter.get('/home', authenticate, (req, res) => {
     'Stop dillydallying and read!',
     'Ugh... just pick up your book and read',
     'Hey you... yea you... READ!',
-    'read, read, read, read'
+    'read, read, read, read',
+    'Are you going to read yet?'
   ]
 
   let whichGreeting = Math.floor(Math.random() * greetings.length)

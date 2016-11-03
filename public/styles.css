@@ -369,7 +369,7 @@ form {
 }
 
 .bookname {
-  font-size: 50;
+  font-size: 50px;
 }
 
 .log-out-button {
@@ -387,8 +387,7 @@ form {
 }
 
 .profile-area-container {
-  border: 2px solid blue;
-  background: red;
+  border: 2px solid black;
   height: 100%;
   width: 100%;
   display: flex;
@@ -401,8 +400,8 @@ form {
 .profile-area {
   margin-top: -100px;
   width: 45%;
-  background: green;
-  border: 2px solid white;
+  background: white;
+  border: 2px solid black;
   height: 75%;
 }
 
@@ -420,4 +419,8 @@ form {
   font-size: 40px;
 }
 
-
+@media (max-width: 1160px) {
+  .sub-header {
+    font-size: 10px;
+  }
+}

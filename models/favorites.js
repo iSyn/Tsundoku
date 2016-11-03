@@ -10,6 +10,7 @@ function getFavorites(req, res, next) {
       .find({ userId: { $eq: req.session.userId } })
       .toArray((toArrErr, data) => {
         if(toArrErr) return next(toArrErr);
+        console.log('data back from getFaves: ', data);
         res.favorites = data;
         db.close();
         next();
@@ -27,12 +28,12 @@ function saveFavorite(req, res, next) {
   // console.log('!!!!!!!!!!!!' + res.session.userId)
   // copying all of req.body into insertObj
   for(key in req.body) {
-    insertObj[key] = req.body[key];
+    insertObj.favorite[key] = req.body[key];
   }
 
   // Adding userId to insertObj
   insertObj.favorite.userId = req.session.userId;
-
+  console.log('object about to be saved looks like: ', insertObj);
   getDB().then((db) => {
     db.collection('favorites')
       .insert(insertObj.favorite, (insertErr, result) => {
