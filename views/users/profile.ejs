@@ -35,9 +35,10 @@
           <div class='profile-left-header'>YOU PROBABLY WONT READ THESE BUT...</div>
           <div class='bookcase-wrapper'>
             <div class='bookcase'>
-
               <% for (i = 0; i < faves.length; i++) { %>
-                <p class='bookname'> <%= faves[i].title %> </p>
+                <p class='book-name'> <%= faves[i].title %> </p>
+                <p class='book-author'> <%= faves[i].author %> </p>
+                <p class='book-description'> <%= faves[i].description %> </p>
                 <% console.log(faves[i]) %>
               <% } %>
             </div>
