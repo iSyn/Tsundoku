@@ -53,6 +53,7 @@
 
                   <form action='/users/search' method='POST'>
                     <img class='modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
+
                 </div>
                   <div class='modal-area book-info-area'>
                     <li class='title-name'><%=book.volumeInfo.title%></li> <br>
@@ -68,6 +69,7 @@
               </div> <!-- model-container -->
             </div>
           <% }) %>
+          <a href='#'><div class='more-books'>Show more books...</div></a>
         </div>
       </div>
 
