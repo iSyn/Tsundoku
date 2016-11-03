@@ -405,6 +405,10 @@ form {
   height: 75%;
 }
 
+.left-side {
+  overflow-y: auto;
+}
+
 .profile-left-header {
   text-align: center;
   font-size: 40px;
@@ -412,11 +416,9 @@ form {
 
 .bookcase-wrapper {
   display: flex;
-  overflow-y: auto;
 }
 
 .bookcase {
-  overflow-y: auto;
 }
 
 .profile-right-header {
