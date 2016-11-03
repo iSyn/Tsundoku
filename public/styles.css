@@ -414,6 +414,11 @@ form {
   display: flex;
 }
 
+.bookcase {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .profile-right-header {
   text-align: center;
   font-size: 40px;
