@@ -13,8 +13,8 @@ function createUser(req, res, next) {
     email: req.body.user.email,
 
     // Store hashed password
-    // password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
-    password: req.body.user.password
+    password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
+    // password: req.body.user.password
   };
 
   getDB().then((db) => {
