@@ -414,11 +414,21 @@ form {
   font-size: 40px;
 }
 
-.bookcase-wrapper {
+.bookcase {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.bookcase {
+.book-thumbnail {
+  background-color: black;
+  border: 2px solid black;
+  max-height: 200px;
+  min-height: 200px;
+  max-width: 130px;
+  min-width: 130px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 .profile-right-header {
