@@ -37,7 +37,9 @@
           <div class='bookcase'>
             <% for (i = 0; i < faves.length; i++) { %>
               <img class='book-thumbnail' img src='<%= faves[i].thumbnail %>'></img>
-              <% console.log(faves[i]) %>
+              <% console.log(faves[i].title) %>
+              <% console.log(faves[i].author) %>
+              <% console.log(faves[i].description) %>
             <% } %>
           </div>
         </div>

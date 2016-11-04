@@ -150,7 +150,7 @@ li {
   bottom: 0px;
   width: 100vw;
   height: 30px;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 30px;
 }
 
@@ -197,7 +197,7 @@ form {
 }
 
 .book-info-area {
-  width: 70%;
+  width: 68%;
   overflow-x: auto;
 }
 
@@ -397,6 +397,7 @@ form {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
 .profile-area {
@@ -408,17 +409,21 @@ form {
 }
 
 .left-side {
-  overflow-y: auto;sea
+  overflow-y: auto;
+}
 
 .profile-left-header {
+  position: relative;
   text-align: center;
   font-size: 40px;
+  background: snow;
 }
 
 .bookcase {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .book-thumbnail {
