@@ -149,6 +149,9 @@ li {
   text-align: center;
   bottom: 0px;
   width: 100vw;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 form {
