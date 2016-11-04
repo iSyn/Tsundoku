@@ -133,8 +133,7 @@ li {
 }
 
 .search-results {
-  height: 97%;
-  margin: 0 auto;
+  height: 96%;
   width: 700px;
   margin: 10px auto 0px auto;
   border: 1px solid black;
@@ -406,8 +405,7 @@ form {
 }
 
 .left-side {
-  overflow-y: auto;
-}
+  overflow-y: auto;sea
 
 .profile-left-header {
   text-align: center;
