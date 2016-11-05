@@ -17,8 +17,9 @@
 
   <body>
     <div class="page-container">
-      <div class='page-container-cover'></div>
-      <div class='cover-page'></div>
+
+      <div class='cover-the-page'></div>
+
       <div class='account-modal'>
         <i class="fa fa-times account-close-window"></i>
         <div class='account-modal-wrapper'>
@@ -49,9 +50,9 @@
         <a href='/'><div class="main-header">TSUNDOKU</div></a>  <span class='sub-header'>(n.) The condition of acquiring reading materials but letting them pile up in one's home without reading them.</span>
         <nav class="dropdown-menu"><i class="fa fa-user fa-3x"></i>
           <div class="dropdown-content">
-            <div class='accounts-button'>Create Account</div>
-            <div class='accounts-button'>Log In</div>
-            <div class='accounts-button'>View Profile</div>
+            <div class='dropdown-content-button'>Create Account</div>
+            <div class='dropdown-content-button'>Log In</div>
+            <div class='dropdown-content-button'>View Profile</div>
           </div>
         </nav> <!-- dropdown-menu -->
       </div> <!-- header-container -->
@@ -61,7 +62,6 @@
           <div class="content-area-header">Search for a book you <i>want</i> to read <br> but <i>probably</i> won't</div>
           <form action="/search" method="GET">
             <input class='input-area' type="text" name="search" placeholder="Search for a title or author" autocomplete="off" required="required"> <br>
-            <input class='search-book-button' type="submit" value="Search Book">
           </form>
         </div>
       </div> <!-- content-area-container -->

@@ -46,6 +46,15 @@ li {
   list-style: none;
 }
 
+.cover-the-page {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 2;
+  display: none;
+}
+
 .title-name {
   text-align: center;
   font-size: 40px;
@@ -59,12 +68,12 @@ li {
 .page-container {
   height: 100vh;
   width: 100%;
-  background: snow;
+  background: white;
   overflow: hidden;
 }
 
 .header-container {
-  background: white;
+  background: #B82601;
   padding-left: 10px;
   border-bottom: 1px solid dimgrey;
 }
@@ -73,23 +82,23 @@ li {
   display: inline-block;
   font-family: 'Quicksand';
   font-size: 70px;
-  /*color: dimgrey;*/
-  color: #35582D;
+  color: white;
   cursor: pointer;
 }
 
 .sub-header {
+  color: #D5D5D5;
   font-family: 'Slabo 27px';
   font-size: 15px;
   display: none;
 }
 
 .main-header:hover {
-  color: grey;
+  color: #D5D5D5;
 }
 
 .fa-user {
-  color: grey;
+  color: white;
   float: right;
   margin-top: 20px;
   margin-right: 30px;
@@ -97,7 +106,7 @@ li {
 }
 
 .fa-user:hover {
-  color: dimgrey;
+  color: #D5D5D5;
 }
 
 .content-area-container-search {
@@ -117,7 +126,7 @@ li {
   margin-left: auto;
   margin-right: auto;
   top: 5%;
-  background: white;
+  background: #EFEFEF;
 }
 
 .welcome-message {
@@ -129,7 +138,7 @@ li {
   font-family: 'Alegreya';
   font-size: 75px;
   padding: 20px 0px 20px 0px;
-  color: dimgrey;
+  color: #424242;
 }
 
 .search-results {
@@ -172,7 +181,7 @@ form {
   transform: translate(-50%, -50%);
   background: snow;
   padding: 10px;
-  z-index: 5;
+  z-index: 3;
 }
 
 .modal-container {
@@ -199,24 +208,6 @@ form {
 .book-info-area {
   width: 68%;
   overflow-x: auto;
-}
-
-.cover-page {
-  z-index: 4;
-  position: fixed;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.page-container-cover {
-  z-index: 10;
-  position: fixed;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .fa-times {
@@ -263,7 +254,7 @@ form {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   right: 0;
-  z-index: 1000000;
+  z-index: 1;
   text-align: center;
 }
 
@@ -279,7 +270,7 @@ form {
   background-color: #f1f1f1
 }
 
-.dropdown-content .accounts-button {
+.dropdown-content .dropdown-content-button {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -287,7 +278,7 @@ form {
   cursor: pointer;
 }
 
-.dropdown-content .accounts-button:hover {
+.dropdown-content .dropdown-content-button:hover {
   background-color: #f1f1f1
 }
 
@@ -301,7 +292,7 @@ form {
 
 .account-modal {
   display: none;
-  z-index: 100;
+  z-index: 3;
   position: fixed;
   height: 70vh;
   width: 70%;
@@ -343,7 +334,7 @@ form {
   cursor: pointer;
   margin-top: 10px;
   padding: 10px;
-  background: white;
+  background: #CBE9F3;
   color: darkgrey;
   border: 1px solid darkgrey;
 }
@@ -366,7 +357,7 @@ form {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999999999999999;
+  z-index: 3;
   font-family: 'Bree Serif', serif;
 }
 
