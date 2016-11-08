@@ -9,24 +9,28 @@ const SALTROUNDS = 10;
 
 function createUser(req, res, next) {
 
-  const userObject = {
-    username: req.body.user.username,
-    email: req.body.user.email,
+  if (req.body.user.password === req.body.user.confirmpassword) {
+    const userObject = {
+      username: req.body.user.username,
+      email: req.body.user.email,
 
-    // Store hashed password
-    password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
-  };
+      // Store hashed password
+      password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
+    };
 
-    getDB().then((db) => {
-      db.collection('users')
-        .insert(userObject, (insertErr, dbUser) => {
-          if (insertErr) return next(insertErr);
+      getDB().then((db) => {
+        db.collection('users')
+          .insert(userObject, (insertErr, dbUser) => {
+            if (insertErr) return next(insertErr);
 
-          res.user = dbUser;
-          db.close();
-          return next();
-        });
-    });
+            res.user = dbUser;
+            db.close();
+            return next();
+          });
+      });
+    } else {
+      res.redirect('/')
+    }
   }
 
 function getUserById(id) {

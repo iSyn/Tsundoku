@@ -19,6 +19,7 @@ input {
   padding: 20px;
   font-size: 40px;
   cursor: text;
+  border: 2px solid dodgerblue;
 }
 
 button {
@@ -297,7 +298,7 @@ form {
   position: fixed;
   height: 70vh;
   width: 70%;
-  background: white;
+  background: antiquewhite;
   border: 3px solid black;
   z-index: 5px;
   top: 50%;
@@ -315,6 +316,10 @@ form {
   align-items: center;
 }
 
+input .incorrect-pass {
+  border: 1px solid red;
+}
+
 .login-button {
   background: dodgerblue;
   color: white;
@@ -326,9 +331,11 @@ form {
 .account {
   height: 90%;
   width: 45%;
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 10px;
   overflow: auto;
+  box-shadow: 0px 5px 2px #222;
+  background: white;
 }
 
 .account-header {
@@ -341,6 +348,8 @@ form {
 .login-area {
   padding: 10px;
   margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .search-book-button {

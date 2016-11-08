@@ -51,6 +51,29 @@ $(() => {
     }, 1000)
   })
 
+  $('.login-password').keypress(() => {
+    console.log('typing password!')
+  })
+
+  const checkPasswordSame = (() => {
+    setTimeout(() => {
+      let passwordVal = $('.login-password').val()
+      console.log(passwordVal)
+      let confirmVal = $('.login-confirmpassword').val()
+      console.log(confirmVal)
+
+      if (passwordVal === confirmVal) {
+        $('.login-confirmpassword').css('border', '1px solid black');
+      } else {
+        $('.login-confirmpassword').css('border', '1px solid red');
+      }
+    },50)
+  })
+
+  $('.login-confirmpassword').keypress(() => {
+    checkPasswordSame()
+  })
+
 
 
 
