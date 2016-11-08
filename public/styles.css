@@ -19,7 +19,7 @@ input {
   padding: 20px;
   font-size: 40px;
   cursor: text;
-  border: 2px solid dodgerblue;
+  border: 2px solid #222;
 }
 
 button {
@@ -124,11 +124,12 @@ li {
   position: relative;
   height: 77%;
   width: 80%;
-  border: 1px solid grey;
+  border: 2px solid #222;
   margin-left: auto;
   margin-right: auto;
   top: 5%;
   background: #EFEFEF;
+  box-shadow: 0 2px 2px #222;
 }
 
 .welcome-message {
@@ -305,6 +306,7 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+  box-shadow: 0 2px 2px #222;
 }
 
 .account-modal-wrapper {
