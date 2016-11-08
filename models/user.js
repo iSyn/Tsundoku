@@ -8,26 +8,26 @@ const bcrypt       = require('bcryptjs');
 const SALTROUNDS = 10;
 
 function createUser(req, res, next) {
+
   const userObject = {
     username: req.body.user.username,
     email: req.body.user.email,
 
     // Store hashed password
     password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
-    // password: req.body.user.password
   };
 
-  getDB().then((db) => {
-    db.collection('users')
-      .insert(userObject, (insertErr, dbUser) => {
-        if (insertErr) return next(insertErr);
+    getDB().then((db) => {
+      db.collection('users')
+        .insert(userObject, (insertErr, dbUser) => {
+          if (insertErr) return next(insertErr);
 
-        res.user = dbUser;
-        db.close();
-        return next();
-      });
-  });
-}
+          res.user = dbUser;
+          db.close();
+          return next();
+        });
+    });
+  }
 
 function getUserById(id) {
   return getDB().then((db) => {
