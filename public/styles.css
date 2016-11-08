@@ -73,7 +73,8 @@ li {
 }
 
 .header-container {
-  background: #B82601;
+  /*background: #B82601;*/
+  background: #222;
   padding-left: 10px;
   border-bottom: 1px solid dimgrey;
 }
@@ -298,9 +299,11 @@ form {
   width: 70%;
   background: white;
   border: 3px solid black;
+  z-index: 5px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
 }
 
 .account-modal-wrapper {
@@ -312,10 +315,20 @@ form {
   align-items: center;
 }
 
+.login-button {
+  background: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  width: 190px;
+}
+
 .account {
   height: 90%;
   width: 45%;
   border: 1px solid black;
+  border-radius: 10px;
+  overflow: auto;
 }
 
 .account-header {

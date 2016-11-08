@@ -39,6 +39,11 @@
           <div class='bookcase'>
             <% for (i = 0; i < faves.length; i++) { %>
               <img class='book-thumbnail' img src='<%= faves[i].thumbnail %>'></img>
+              <div class='profile-book-modal' id='<%= faves.id %>'>
+                <li class='profile-book-name'><%=faves[i].title%></li> <br>
+                <li class='profile-author-name'><%=faves[i].authors%></li> <br>
+                <li class='profile-description-text'><%=faves[i].description%></li>
+              </div>
               <% console.log(faves[i].title) %>
               <% console.log(faves[i].author) %>
               <% console.log(faves[i].description) %>
