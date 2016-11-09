@@ -83,7 +83,7 @@ li {
 .main-header {
   display: inline-block;
   font-family: 'Quicksand';
-  font-size: 70px;
+  font-size: 6em;
   color: #FAFAFA;
   cursor: pointer;
 }
@@ -140,11 +140,11 @@ li {
 }
 
 .content-area {
-  position: absolute;
+ /* position: absolute;
   top: 45%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -45%);
+  transform: translate(-50%, -45%);*/
 }
 
 .content-area-header {
@@ -285,6 +285,7 @@ form {
 }
 
 .dropdown-content .dropdown-content-button {
+  position: relative;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
