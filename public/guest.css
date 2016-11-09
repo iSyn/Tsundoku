@@ -212,8 +212,8 @@
 .content-area-header {
   text-align: center;
   font-family: 'Alegreya';
-  font-size: 75px;
-  padding: 20px 0px 20px 0px;
+  font-size: 12vh;
+  padding: 20px 10px;
   color: #424242;
 }
 
