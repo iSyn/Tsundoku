@@ -14,7 +14,7 @@ input {
   outline: none;
 }
 
-.input-area {
+.search-input-area {
   width: 80%;
   padding: 20px;
   font-size: 40px;
@@ -227,6 +227,7 @@ form {
 .fa-times {
   position: absolute;
   left: 98%;
+  top: 2%;
   color: black;
   cursor: pointer;
 }
@@ -334,7 +335,7 @@ input .incorrect-pass {
   border: 1px solid red;
 }
 
-.login-button {
+.account-modal-login-button {
   background: dodgerblue;
   color: white;
   border-radius: 5px;
@@ -342,7 +343,7 @@ input .incorrect-pass {
   width: 190px;
 }
 
-.account {
+.account-modal-sections {
   height: 90%;
   width: 45%;
   border: 3px solid black;
@@ -352,14 +353,14 @@ input .incorrect-pass {
   background: white;
 }
 
-.account-header {
+.account-modal-header {
   text-align: center;
   font-size: 50px;
   padding-top: 10px;
   padding-bottom: 20px;
 }
 
-.login-area {
+.account-modal-input-area {
   padding: 10px;
   margin: 5px;
   border: 1px solid black;

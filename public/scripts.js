@@ -39,6 +39,10 @@ $(() => {
     $('.dropdown-content').show()
   })
 
+  $('.dropdown-content').mouseout(() => {
+    $('.dropdown-content').hide()
+  })
+
   $('.tsundoku-it-broken').click(() => {
     $('.account-modal').css('display', 'block')
   })
@@ -50,6 +54,8 @@ $(() => {
       $('.tsundokud-modal').css('display', 'none')
     }, 1000)
   })
+
+
 
   $('.login-password').keypress(() => {
     console.log('typing password!')
