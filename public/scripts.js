@@ -5,7 +5,7 @@ $(() => {
   $('.cover-the-page').click(() => {
     $('.account-modal').css('display', 'none')
     $('.cover-the-page').css('display', 'none')
-    $('.modal').css('display', 'none')
+    $('.search-book-modal-container').css('display', 'none')
     $('.cover-the-page').css('display', 'none')
   })
 
@@ -24,7 +24,7 @@ $(() => {
   $('.fa-times').click(() => {
     $('.cover-the-page').css('display', 'none')
     $('.account-modal').css('display', 'none')
-    $('.modal').css('display', 'none')
+    $('.search-book-modal-container').css('display', 'none')
   })
 
   $('.main-header').mouseover(() => {

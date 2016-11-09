@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Tsundoku </title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/guest.css">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
@@ -15,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   </head>
 
   <body>
@@ -24,27 +26,26 @@
       <div class='cover-the-page'></div>
 
       <div class='account-modal'>
-        <i class="fa fa-times account-close-window"></i>
+        <i class="fa fa-times"></i>
         <div class='account-modal-wrapper'>
-          <div class="account login-section">
-            <div class='account-header login-section-header'>Log In</div>
-            <form class="" action="/auth" method="post">
-              <input class='login-area' type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
-              <input class='login-area' type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
-              <input class='login-area login-button' type="submit" name="name" value="Log in">
+          <div class="account-modal-sections">
+            <div class='account-modal-header'>Log In</div>
+            <form class="account-modal-input-area-wrapper" action="/auth" method="post">
+              <input class='account-modal-input-area' type="text" name="user[username]" value="" placeholder="Username" autocomplete="off" required="required"> <br>
+              <input class='account-modal-input-area' type="password" name="user[password]" value="" placeholder="Password" autocomplete="off" required="required"> <br>
+              <input class='account-modal-input-area account-modal-login-button' type="submit" name="name" value="Log in">
             </form>
-          </div>
-          <div class="account create-section">
-            <div class='account-header create-section-header'>Create New Account</div>
-            <form class="" action="/users" method="post">
-              <input class='login-area' type="text" name="user[username]" value="" placeholder="Username *" autocomplete="off" required="required" autofocus> <br>
-              <input class='login-area' type="email" name="user[email]" value="" placeholder="Email" autocomplete="off"> <br>
-              <input class='login-area login-password' type="password" name="user[password]" value="" placeholder="Password *" autocomplete="off" required="required"> <br>
-              <input class='login-area login-confirmpassword' type="password" name='user[confirmpassword]' value="" placeholder="Confirm Password *" autocomplete="off" required="required"> <br>
-              <div class='required-text'>* = required</div>
-              <input class='login-area login-button' type="submit" value="Sign up">
+          </div> <!-- account-modal-sections -->
+          <div class="account-modal-sections">
+            <div class='account-modal-header'>Create New Account</div>
+            <form class="account-modal-input-area-wrapper" action="/users" method="post">
+              <input class='account-modal-input-area' type="text" name="user[username]" value="" placeholder="Username *" autocomplete="off" required="required" autofocus> <br>
+              <input class='account-modal-input-area' type="email" name="user[email]" value="" placeholder="Email" autocomplete="off"> <br>
+              <input class='account-modal-input-area login-password' type="password" name="user[password]" value="" placeholder="Password *" autocomplete="off" required="required"> <br>
+              <input class='account-modal-input-area login-confirmpassword' type="password" name='user[confirmpassword]' value="" placeholder="Confirm Password *" autocomplete="off" required="required"> <br>
+              <input class='account-modal-input-area account-modal-login-button' type="submit" value="Sign up">
             </form>
-          </div>
+          </div> <!-- account-modal-sections -->
         </div> <!-- account-modal-wrapper -->
       </div> <!-- account-modal -->
 
@@ -55,35 +56,40 @@
             <div class='dropdown-content-button'>Create Account</div>
             <div class='dropdown-content-button'>Log In</div>
             <div class='dropdown-content-button'>View Profile</div>
-          </div>
+          </div> <!-- dropdown-content -->
         </nav> <!-- dropdown-menu -->
       </div> <!-- header-container -->
 
-      <div class="content-area-container-search">
-        <div class="search-results">
+      <div class="search-content-area-container">
+
+        <div class="search-results-container">
+
           <% books.forEach((book) => { %>
-          <% if (book.volumeInfo.imageLinks){ %>
-            <img src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
-            <% }; %>
-            <div class="modal" id='<%= book.id %>'>
-              <div class='modal-container'>
-                <i class="fa fa-times" aria-hidden="true"></i>
-                <div class='modal-area book-picture-area'>
-                  <% if (book.volumeInfo.imageLinks){ %>
-                  <img class='modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
-                </div>
-                <div class='modal-area book-info-area'>
-                  <li class='title-name'><%=book.volumeInfo.title%></li> <br>
-                  <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
-                  <button class='tsundoku-it-broken' type="submit">SIGN IN TO TSUNDOKU IT</button>
-                  <li class='book-description'><br><%=book.volumeInfo.description%></li>
-                </div>
-              </div> <!-- model-container -->
-            </div>
+            <% if (book.volumeInfo.imageLinks){ %>
+              <img src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
+          <% }; %>
+
+          <!-- MODAL -->
+          <div class="search-book-modal-container" id='<%= book.id %>'>
+            <div class='search-book-modal'>
+              <i class="fa fa-times"></i>
+              <div class='search-book-modal-picture-area'>
+                <% if (book.volumeInfo.imageLinks){ %>
+                <img class='search-book-modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
+              </div> <!-- search-book-modal-picture-area -->
+              <div class='search-book-modal-info-area'>
+                <li class='title-name'><%=book.volumeInfo.title%></li> <br>
+                <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
+                <button class='tsundoku-it-broken' type="submit">SIGN IN TO TSUNDOKU IT</button>
+                <li class='book-description'><br><%=book.volumeInfo.description%></li>
+              </div> <!-- search-results-container -->
+            </div> <!-- search-book-modal -->
+          </div> <!-- search-book-modal-container -->
+
           <% }) %>
-          <a href='#'><div class='more-books'>Show more books...</div></a>
-        </div>
-      </div>
+
+        </div> <!-- search-results -->
+      </div> <!-- search-content-area-container -->
 
       <div class="footer">&copy Synclair Wang 2016</div>
 

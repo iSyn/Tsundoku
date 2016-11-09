@@ -20,7 +20,7 @@
 
 /*
 ////////////////////////////////////////////////////////////////////////
-// account-modal
+// create account modal
 ////////////////////////////////////////////////////////////////////////
 */
 
@@ -113,7 +113,7 @@
 
 /*
 ////////////////////////////////////////////////////////////////////////
-// header-container
+// header container
 ////////////////////////////////////////////////////////////////////////
 */
 
@@ -192,7 +192,7 @@
 
 /*
 ////////////////////////////////////////////////////////////////////////
-// content-area-container
+// content area container
 ////////////////////////////////////////////////////////////////////////
 */
 
@@ -223,12 +223,91 @@
 }
 
 .search-input-area {
+  font-family: 'Open Sans';
+  font-weight: '300';
   width: 80%;
   padding: 20px;
   font-size: 40px;
   cursor: text;
   border: 2px solid #222;
 }
+
+/*
+////////////////////////////////////////////////////////////////////////
+// search content area container
+////////////////////////////////////////////////////////////////////////
+*/
+
+.search-content-area-container {
+  background: snow;
+  position: relative;
+  height: 87%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.search-results-container {
+  height: 96%;
+  width: 700px;
+  margin: 10px auto 0px auto;
+  border: 1px solid black;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-book-modal-container {
+  display: none;
+  width: 90vw;
+  height: 60vh;
+  border: 3px solid black;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: snow;
+  padding: 10px;
+  z-index: 2;
+}
+
+.search-book-modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-book-modal > .fa-times {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.search-book-modal-picture-area {
+  width: 30%;
+  overflow: auto;
+}
+
+.search-book-modal-info-area {
+  width: 68%;
+  overflow-x: auto;
+}
+
+.search-book-modal-image {
+  width: 30%;
+  min-width: 300px;
+  min-height: 450px;
+  border: 2px solid black;
+  cursor: default;
+}
+
 
 /*
 ////////////////////////////////////////////////////////////////////////
