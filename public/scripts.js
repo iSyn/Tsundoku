@@ -39,7 +39,7 @@ $(() => {
     $('.dropdown-content').show()
   })
 
-  $('.dropdown-content').mouseout(() => {
+  $('.dropdown-content').click(() => {
     $('.dropdown-content').hide()
   })
 
@@ -54,7 +54,6 @@ $(() => {
       $('.tsundokud-modal').css('display', 'none')
     }, 1000)
   })
-
 
 
   $('.login-password').keypress(() => {
