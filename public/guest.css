@@ -18,6 +18,15 @@
   z-index: 2;
 }
 
+.cover-the-page-x2 {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, .6);
+  display: none;
+  z-index: 3;
+}
+
 /*
 ////////////////////////////////////////////////////////////////////////
 // create account modal
@@ -32,7 +41,7 @@
   width: 70%;
   background: antiquewhite;
   border: 3px solid black;
-  z-index: 5px;
+  z-index: 4;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -96,7 +105,7 @@
 }
 
 .account-modal-login-button {
-  background: dodgerblue;
+  background: firebrick;
   color: white;
   border-radius: 5px;
   outline: none;
@@ -109,7 +118,7 @@
 }
 
 .account-modal-login-button:hover {
-  background: lightblue;
+  background: darkred;
 }
 
 /*
@@ -119,7 +128,7 @@
 */
 
 .header-container {
-  background: #222;
+  background: firebrick;
   padding-left: 10px;
   border-bottom: 1px solid dimgrey;
 }
@@ -242,7 +251,7 @@
 .search-content-area-container {
   background: snow;
   position: relative;
-  height: 87%;
+  height: 83%;
   width: 100%;
   display: flex;
   overflow: hidden;
@@ -260,6 +269,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.search-results-container > img {
+  height: 26vh;
+  width: 18vh;
+  padding: 2px;
+  cursor: pointer;
 }
 
 .search-book-modal-container {
@@ -303,6 +319,10 @@
   overflow-x: auto;
 }
 
+.search-book-modal-info-area > li {
+  list-style: none;
+}
+
 .search-book-modal-image {
   width: 30%;
   min-width: 300px;
@@ -311,6 +331,37 @@
   cursor: default;
 }
 
+.search-book-modal-title-name {
+  text-align: center;
+  font-size: 6vh;
+  font-family: 'Oswald';
+}
+
+.search-book-modal-author-name {
+
+}
+
+.search-book-modal-book-description {
+  font-family: 'Roboto Condensed';
+  font-size: 2.5vh;
+}
+
+.tsundoku-it-broken {
+  background: firebrick;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 30vh;
+  box-shadow: 0 2px 2px #222;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.7vh;
+}
+
+.tsundoku-it-broken:hover {
+  background: darkred;
+}
 
 /*
 ////////////////////////////////////////////////////////////////////////
@@ -319,7 +370,6 @@
 */
 
 .footer {
-  position: absolute;
   text-align: center;
   bottom: 0px;
   width: 100vw;

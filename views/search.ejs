@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Tsundoku </title>
-    <link rel="stylesheet" href="/styles.css">
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
     <link rel="stylesheet" href="/guest.css">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
@@ -24,6 +24,7 @@
     <div class="page-container">
 
       <div class='cover-the-page'></div>
+      <div class='cover-the-page-x2'></div>
 
       <div class='account-modal'>
         <i class="fa fa-times"></i>
@@ -60,10 +61,13 @@
         </nav> <!-- dropdown-menu -->
       </div> <!-- header-container -->
 
+      <!-- <div class='search-more-books'>
+        <input type="text">
+      </div> -->
+
       <div class="search-content-area-container">
 
         <div class="search-results-container">
-
           <% books.forEach((book) => { %>
             <% if (book.volumeInfo.imageLinks){ %>
               <img src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
@@ -78,10 +82,10 @@
                 <img class='search-book-modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
               </div> <!-- search-book-modal-picture-area -->
               <div class='search-book-modal-info-area'>
-                <li class='title-name'><%=book.volumeInfo.title%></li> <br>
-                <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
+                <li class='search-book-modal-title-name'><%=book.volumeInfo.title%></li> <br>
+                <li class='search-book-modal-author-name'>By <%=book.volumeInfo.authors%></li> <br>
                 <button class='tsundoku-it-broken' type="submit">SIGN IN TO TSUNDOKU IT</button>
-                <li class='book-description'><br><%=book.volumeInfo.description%></li>
+                <li class='search-book-modal-book-description'><br><%=book.volumeInfo.description%></li>
               </div> <!-- search-results-container -->
             </div> <!-- search-book-modal -->
           </div> <!-- search-book-modal-container -->

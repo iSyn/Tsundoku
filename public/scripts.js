@@ -23,6 +23,7 @@ $(() => {
 
   $('.fa-times').click(() => {
     $('.cover-the-page').css('display', 'none')
+    $('.cover-the-page-x2').css('display', 'none')
     $('.account-modal').css('display', 'none')
     $('.search-book-modal-container').css('display', 'none')
   })
@@ -45,6 +46,13 @@ $(() => {
 
   $('.tsundoku-it-broken').click(() => {
     $('.account-modal').css('display', 'block')
+    $('.cover-the-page-x2').css('display', 'block')
+  })
+
+  $('.cover-the-page-x2').click(() => {
+    $('.account-modal').css('display', 'none')
+    $('.cover-the-page-x2').css('display', 'none')
+    $('.cover-the-page').css('display', 'none')
   })
 
   $('.tsundoku-it').click(() => {
