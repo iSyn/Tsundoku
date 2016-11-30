@@ -75,7 +75,7 @@ li {
 
 .header-container {
   /*background: #B82601;*/
-  background: #222;
+  background: firebrick;
   padding-left: 10px;
   border-bottom: 1px solid dimgrey;
 }
