@@ -39,25 +39,25 @@
         </nav> <!-- dropdown-menu -->
       </div> <!-- header-container -->
 
-      <div class="content-area-container-search">
-        <div class="search-results">
+      <div class="search-content-area-container">
+        <div class="search-results-container">
           <% books.forEach((book) => { %>
           <% if (book.volumeInfo.imageLinks){ %>
             <img src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
             <% }; %>
             <div class="modal" id='<%= book.id %>'>
-              <div class='modal-container'>
+              <div class='search-book-modal'>
                 <i class="fa fa-times" aria-hidden="true"></i>
-                <div class='modal-area book-picture-area'>
+                <div class='search-book-modal-picture-area'>
                   <% if (book.volumeInfo.imageLinks){ %>
 
                   <form action='/users/search' method='POST'>
-                    <img class='modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
+                    <img class='search-book-modal-image' src="<%= book.volumeInfo.imageLinks.thumbnail %>"> <% }; %>
 
                 </div>
-                  <div class='modal-area book-info-area'>
-                    <li class='title-name'><%=book.volumeInfo.title%></li> <br>
-                    <li class='author-name'>By <%=book.volumeInfo.authors%></li> <br>
+                  <div class='search-book-modal-info-area'>
+                    <li class='search-book-modal-title-name'><%=book.volumeInfo.title%></li> <br>
+                    <li class='search-book-modal-author-name'>By <%=book.volumeInfo.authors%></li> <br>
                     <% if (book.volumeInfo.imageLinks){ %>
                     <input type='hidden' name='thumbnail' value='<%=book.volumeInfo.imageLinks.thumbnail%>'>
                     <% } %>
@@ -65,7 +65,7 @@
                     <input type='hidden' name='author' value='<%=book.volumeInfo.authors%>'>
                     <input type='hidden' name='description' value='<%=book.volumeInfo.description%>'>
                     <button class='tsundoku-it' type="submit">TSUNDOKU IT</button>
-                    <li class='book-description'><br><%=book.volumeInfo.description%></li>
+                    <li class='search-book-modal-book-description'><br><%=book.volumeInfo.description%></li>
                   </form>
 
                 </div>

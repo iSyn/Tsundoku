@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Tsundoku </title>
-    <!-- <link rel="stylesheet" href="/styles.css"> -->
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/guest.css">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
@@ -39,7 +39,7 @@
           <div class='welcome-message'><span class='name'><%= (user.username).toUpperCase() %></span> <br> <%= greeting %> </div>
           <div class="content-area-header">Search for a book you <i>want</i> to read <br> but <i>probably</i> won't</div>
           <form action="/search" method="get">
-            <input class='input-area' type="text" name="search" placeholder="Search for a title or author" autocomplete="off" required="required"> <br>
+            <input class='search-input-area' type="text" name="search" placeholder="Search for a title or author" autocomplete="off" required="required"> <br>
           </form>
         </div>
       </div> <!-- content-area-container -->

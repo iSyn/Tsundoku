@@ -222,7 +222,7 @@
 .content-area-header {
   text-align: center;
   font-family: 'Alegreya';
-  font-size: 12vh;
+  font-size: 8vh;
   padding: 20px 10px;
   color: #424242;
 }
@@ -363,6 +363,23 @@
   background: darkred;
 }
 
+.tsundokud-modal {
+  display: none;
+  position: absolute;
+  height: 40vh;
+  line-height: 40vh;
+  font-size: 190px;
+  text-align: center;
+  width: 100%;
+  background: linen;
+  border: 5px solid black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-family: 'Bree Serif', serif;
+}
+
 /*
 ////////////////////////////////////////////////////////////////////////
 // footer
@@ -379,10 +396,16 @@
   font-size: 18px;
 }
 
+/*
+////////////////////////////////////////////////////////////////////////
+// users
+////////////////////////////////////////////////////////////////////////
+*/
 
-
-
-
-
-
+.welcome-message {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 2vw;
+}
 
