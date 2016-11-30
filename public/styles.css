@@ -177,6 +177,10 @@ li {
   line-height: 30px;
 }
 
+.footer > a {
+  cursor: pointer;
+}
+
 form {
   position: relative;
   text-align: center;
