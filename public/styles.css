@@ -161,7 +161,7 @@ li {
   height: 96%;
   width: 700px;
   margin: 10px auto 0px auto;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   overflow: auto;
   display: flex;
   flex-direction: row;
@@ -326,6 +326,12 @@ form {
   transform: translate(-50%, -50%);
   border-radius: 10px;
   box-shadow: 0 2px 2px #222;
+  animation: fadeIn .3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 .account-modal-wrapper {
