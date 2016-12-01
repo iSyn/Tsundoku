@@ -1,4 +1,7 @@
 # TSUNDOKU
+
+![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)
+
 ![book-gif](https://media.giphy.com/media/8BS2RgwTl9Z7O/giphy.gif)
 
 "Tsundoku" (n.) is the condition of acquiring reading materials but letting them pile up in one's home without reading them.
