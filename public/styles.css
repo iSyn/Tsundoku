@@ -12,14 +12,13 @@ a {
 }
 
 input {
-  outline: none;
+  cursor: text;
 }
 
 .input-area {
   width: 80%;
   padding: 20px;
   font-size: 40px;
-  cursor: text;
   border: 2px solid #222;
 }
 
@@ -234,6 +233,7 @@ form {
 .fa-times {
   position: absolute;
   left: 98%;
+  top: 1%;
   color: black;
   cursor: pointer;
 }
@@ -353,6 +353,7 @@ input .incorrect-pass {
   border-radius: 5px;
   outline: none;
   width: 190px;
+  cursor: pointer;
 }
 
 .login-button:hover {
