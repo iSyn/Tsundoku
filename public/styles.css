@@ -140,11 +140,11 @@ li {
 }
 
 .content-area {
- /* position: absolute;
-  top: 45%;
+  position: absolute;
+  top: 40%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -45%);*/
+  transform: translate(-50%, -40%);
 }
 
 .content-area-header {
