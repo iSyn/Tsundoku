@@ -33,12 +33,12 @@ button {
 }
 
 img {
-  max-height: 200px;
   background-color: black;
   border: 2px solid black;
-  min-height: 200px;
-  max-width: 130px;
-  min-width: 130px;
+  min-height: 30vh;
+  max-height: 30vh;
+  min-width: 20vh;
+  max-width: 20vh;
   margin: 5px;
   cursor: pointer;
 }
@@ -117,7 +117,7 @@ li {
 .content-area-container-search {
   background: snow;
   position: relative;
-  height: 87%;
+  height: 81vh;
   width: 100%;
   display: flex;
   overflow: hidden;
