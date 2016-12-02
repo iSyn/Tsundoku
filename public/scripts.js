@@ -5,8 +5,15 @@ $(() => {
   $('.cover-the-page').click(() => {
     $('.account-modal').css('display', 'none')
     $('.cover-the-page').css('display', 'none')
+    $('.cover-the-page-x2').css('display', 'none')
     $('.modal').css('display', 'none')
+  })
+
+  $('.cover-the-page-x2').click(() => {
+    $('.account-modal').css('display', 'none')
     $('.cover-the-page').css('display', 'none')
+    $('.cover-the-page-x2').css('display', 'none')
+    $('.modal').css('display', 'none')
   })
 
   $('img').click((e) => {
@@ -23,6 +30,7 @@ $(() => {
 
   $('.fa-times').click(() => {
     $('.cover-the-page').css('display', 'none')
+    $('.cover-the-page-x2').css('display', 'none')
     $('.account-modal').css('display', 'none')
     $('.modal').css('display', 'none')
   })
@@ -41,6 +49,7 @@ $(() => {
 
   $('.tsundoku-it-broken').click(() => {
     $('.account-modal').css('display', 'block')
+    $('.cover-the-page-x2').css('display', 'block')
   })
 
   $('.tsundoku-it').click(() => {
