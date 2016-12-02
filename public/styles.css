@@ -523,3 +523,7 @@ input .incorrect-pass {
     display: none !important;
   }
 }
+
+.heart {
+  color: red;
+}
