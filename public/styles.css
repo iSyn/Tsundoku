@@ -367,7 +367,12 @@ input .incorrect-pass {
   width: 10vw;
   cursor: pointer;
   border: 1px solid #222 !important;
-}
+  height: 5.5vh;
+  width: 15vw;
+
+  padding: 10px;
+  margin: 5px;
+  }
 
 .login-button:hover {
   background: skyblue;
@@ -396,6 +401,7 @@ input .incorrect-pass {
   font-size: 2.5vh;
   border: 1px solid black;
   border-radius: 5px;
+  width: 15vw;
 }
 
 .search-book-button {

@@ -7,6 +7,9 @@ $(() => {
     $('.cover-the-page').css('display', 'none')
     $('.cover-the-page-x2').css('display', 'none')
     $('.modal').css('display', 'none')
+
+    $('.login-area').val('')
+
   })
 
   $('.cover-the-page-x2').click(() => {
