@@ -79,6 +79,7 @@ li {
 
 .header-container {
   /*background: #B82601;*/
+  position: relative;
   background: firebrick;
   padding-left: 10px;
   border-bottom: 1px solid dimgrey;
@@ -109,8 +110,6 @@ li {
 .fa-user {
   color: white;
   float: right;
-  margin-top: 20px;
-  margin-right: 30px;
   cursor: pointer;
 }
 
@@ -266,9 +265,13 @@ form {
 }
 
 .dropdown-menu {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  float: right;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1%;
+  z-index: 1;
+  font-size: 3vh;
 }
 
 .dropdown-content {
@@ -279,8 +282,8 @@ form {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   right: 0;
-  z-index: 1;
   text-align: center;
+  font-size: initial;
 }
 
 .view-profile {
