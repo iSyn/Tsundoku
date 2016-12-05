@@ -16,6 +16,13 @@ authRouter.post('/', logIn, (req, res) => {
   res.redirect('/users/home');
 });
 
+authRouter.post('/search', logIn, (req, res) => {
+  let location = req.headers.referer.split('=')
+  let query = location[1]
+  res.redirect(`/search?search=${query}`)
+})
+
+
 // Logout by assigning null to the userId in the session
 authRouter.delete('/', (req, res) => {
   req.session.userId = null;
