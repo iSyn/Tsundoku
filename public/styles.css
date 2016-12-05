@@ -274,6 +274,10 @@ form {
   font-size: 3vh;
 }
 
+.logged-in-user {
+  font-size: 9vh !important;
+}
+
 .dropdown-content {
   top: 100%;
   display: none;
