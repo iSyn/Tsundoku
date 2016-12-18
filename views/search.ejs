@@ -64,7 +64,7 @@
         <div class="search-results">
           <% books.forEach((book) => { %>
           <% if (book.volumeInfo.imageLinks){ %>
-            <img src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
+            <img class='searched-books-img' src="<%= book.volumeInfo.imageLinks.thumbnail %>" data-modalID="#<%= book.id %>">
             <% }; %>
             <div class="modal" id='<%= book.id %>'>
               <div class='modal-container'>

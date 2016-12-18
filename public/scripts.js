@@ -9,7 +9,6 @@ $(() => {
     $('.modal').css('display', 'none')
 
     $('.login-area').val('')
-
   })
 
   $('.cover-the-page-x2').click(() => {
@@ -19,10 +18,18 @@ $(() => {
     $('.modal').css('display', 'none')
   })
 
-  $('img').click((e) => {
+  $('.searched-books-img').click((e) => {
     const modalID = $(e.target).data('modalid');
     $(modalID).css('display', 'block');
     $('.cover-the-page').css('display', 'block')
+    console.log(e.target)
+    console.log(modalID)
+  })
+
+  $('.book-thumbnail').click((e) => {
+    const modalID = $(e.target).data('modalID');
+    $(modalID).css('display', 'block')
+    console.log(modalID)
   })
 
   $('.dropdown-content-button').click(() => {
